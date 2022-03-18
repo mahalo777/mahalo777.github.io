@@ -14,7 +14,7 @@ module.exports = {
         }, {
             text: '基础填坑',
             items: [
-                { text: 'js', link: '/base/js/'},
+                { text: 'js', link: '/base/js/define'},
                 { text: '八股记录', link: '/base/record/'}
             ],
         }, {
