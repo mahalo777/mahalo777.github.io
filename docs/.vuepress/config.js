@@ -1,18 +1,20 @@
+const path = require('path');
+
 module.exports = {
     head: [
         ['link', { rel: 'icon', href: `icon.png` }]
     ],
     title: '公主日记',
-    description: '填坑日记',
-    base: './', 
+    description: '公主填坑日记',
+    base: '/', 
     themeConfig: {
         nav: [{
-            text: 'home',
+            text: '首页',
             link: '/'
         }, {
             text: '基础填坑',
             items: [
-                { text: 'js', link: '/base/js/test01'},
+                { text: 'js', link: '/base/js/'},
                 { text: '八股记录', link: '/base/record/'}
             ],
         }, {
@@ -21,27 +23,39 @@ module.exports = {
         }],
         sidebar: {
             '/base/js/': [{
-                title: 'js',
+                // title: 'js',
                 collapsable: false,
                 children: [{
-                    title: '测试01',
-                    path: 'test01'
+                    title: 'JS语言定义',
+                    path: 'define'
                 }, {
-                    title: '测试02',
-                    path: 'test02'
+                    title: '基础知识1',
+                    path: 'point1'
                 }]
             }],
             '/base/record/': [{
-                title: 'record',
+                // title: '记录',
                 collapsable: false,
                 children: [{
-                    title: '测试',
-                    path: '/'
+                    title: '八股记录',
+                    path: 'bagu1'
+                }, {
+                    title: '散落知识记录',
+                    path: 'link'
+                }, {
+                    title: '精分现场-预编译',
+                    path: 'jingfen1'
                 }]
             }],
             '/': [''],
         },
-        // 左侧列表展开级数，默认是 1
         sidebarDepth: 6
+    },
+    configureWebpack: {
+        resolve: {
+            alias: {
+                '@imgs': path.join(__dirname, '../assets')
+            }
+        }
     }
 }
