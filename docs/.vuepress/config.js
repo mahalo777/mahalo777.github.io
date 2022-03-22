@@ -31,6 +31,9 @@ module.exports = {
                 }, {
                     title: '基础知识1',
                     path: 'point1'
+                }, {
+                    title: '精分现场-预编译',
+                    path: 'jingfen1'
                 }]
             }],
             '/base/record/': [{
@@ -40,11 +43,8 @@ module.exports = {
                     title: '八股记录',
                     path: 'bagu1'
                 }, {
-                    title: '散落知识记录',
+                    title: '扫书记录',
                     path: 'link'
-                }, {
-                    title: '精分现场-预编译',
-                    path: 'jingfen1'
                 }]
             }],
             '/': [''],
