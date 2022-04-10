@@ -29,8 +29,8 @@ module.exports = {
                     title: 'JS语言定义',
                     path: 'define'
                 }, {
-                    title: '基础知识1',
-                    path: 'point1'
+                    title: '作用域与闭包',
+                    path: 'scope'
                 }, {
                     title: '精分现场-预编译',
                     path: 'jingfen1'

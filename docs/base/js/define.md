@@ -56,7 +56,7 @@
 
 ![v81](~@imgs/v81.jpeg)
 
-![v82](~@imgs/v81.jpeg)
+![v82](~@imgs/v82.jpeg)
 
 上图展示了V8引擎是如何工作的：
 
