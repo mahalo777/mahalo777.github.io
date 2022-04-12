@@ -15,11 +15,11 @@ module.exports = {
             text: '基础填坑',
             items: [
                 { text: 'js', link: '/base/js/define'},
-                { text: '八股记录', link: '/base/record/'}
+                { text: '八股记录', link: '/base/record/bagu1'}
             ],
         }, {
             text: '札记',
-            link: '/diary/'
+            link: '/diary/summary'
         }],
         sidebar: {
             '/base/js/': [{
@@ -31,6 +31,9 @@ module.exports = {
                 }, {
                     title: '作用域与闭包',
                     path: 'scope'
+                }, {
+                    title: '事件循环',
+                    path: 'eventLoop'
                 }, {
                     title: '精分现场-预编译',
                     path: 'jingfen1'
@@ -45,6 +48,14 @@ module.exports = {
                 }, {
                     title: '扫书记录',
                     path: 'link'
+                }]
+            }],
+            '/diary/': [{
+                // title: '记录',
+                collapsable: false,
+                children: [{
+                    title: '随写',
+                    path: 'summary'
                 }]
             }],
             '/': [''],
