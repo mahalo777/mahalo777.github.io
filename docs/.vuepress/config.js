@@ -38,6 +38,15 @@ module.exports = {
                     title: '执行上下文',
                     path: 'context'
                 }, {
+                    title: '原型',
+                    path: 'proto'
+                }, {
+                    title: 'this',
+                    path: 'this'
+                },{
+                    title: '继承',
+                    path: 'extend'
+                }, {
                     title: '精分现场-预编译',
                     path: 'jingfen1'
                 }]

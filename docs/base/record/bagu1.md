@@ -10,6 +10,8 @@
 
 - [执行上下文](https://juejin.cn/post/6945240902625394718#heading-12)好文
 - [事件循环](https://juejin.cn/post/6844904050543034376)
+- [原型基础](https://juejin.cn/post/6890710212803002376#heading-4)
+- [this基础](https://juejin.cn/post/6869943642325254158#heading-0)
 
 
 **webpack**
