@@ -35,6 +35,9 @@ module.exports = {
                     title: '事件循环',
                     path: 'eventLoop'
                 }, {
+                    title: '执行上下文',
+                    path: 'context'
+                }, {
                     title: '精分现场-预编译',
                     path: 'jingfen1'
                 }]

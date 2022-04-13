@@ -2,9 +2,14 @@
 
 **八股综合**
 
-- [综合1](https://juejin.cn/post/7016593221815910408#heading-85)
-- [事件循环](https://juejin.cn/post/6844904050543034376)
+- [八股综合1](https://juejin.cn/post/7016593221815910408#heading-85)
 - [移动端适配rem vw](https://juejin.cn/post/6916473795490349063#heading-2)
+
+
+**JS**
+
+- [执行上下文](https://juejin.cn/post/6945240902625394718#heading-12)好文
+- [事件循环](https://juejin.cn/post/6844904050543034376)
 
 
 **webpack**
@@ -25,7 +30,7 @@
 **react native**
 
 - [启动速度优化|JS篇章](https://supercodepower.com/react-native-performance-js)好文
-- [坑](https://juejin.cn/post/7012804162249293854)好文
+- [rn坑](https://juejin.cn/post/7012804162249293854)好文
 - [性能优化](https://juejin.cn/post/6844904041290432525)好文
 
 
