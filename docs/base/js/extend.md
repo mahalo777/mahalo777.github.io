@@ -433,3 +433,6 @@ instance.sayName();
 instance.sayAge();
 console.log(instance.color, instance1.color)
 ```
+
+##### 总结
+![summaryoo](~@imgs/extend.png)
