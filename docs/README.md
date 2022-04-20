@@ -8,8 +8,7 @@ footer: MIT Licensed | Copyright © 2022-present wenny
 
 ---
 #### JS TODO LIST
-1. JS面向对象相关(继承)
-2. new、bind等手写
+1. new、bind等手写
 
 #### 源码相关
 1. vue2

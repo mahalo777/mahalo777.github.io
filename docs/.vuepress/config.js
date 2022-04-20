@@ -33,7 +33,7 @@ const sidebar = {
             title: 'this',
             path: 'this'
         },{
-            title: '继承',
+            title: '面向对象相关',
             path: 'extend'
         }, {
             title: '精分现场-预编译',
