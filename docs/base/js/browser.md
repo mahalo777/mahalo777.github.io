@@ -5,6 +5,9 @@
 - 浏览器一次导航背后发生了什么
 - 概念的关联：浏览器内核、JS引擎、线程、进程
 - V8是如何工作的
+
+[本人原文原址，懒得搬图片了](https://www.yuque.com/hebingqian/sd5tn0/kifd3i)
+
 ## 浏览器架构
 > 硬件、操作系统、软件的分层架构
 > 浏览器是如何划分模块的，并且分配进程或线程给这些模块运行
@@ -311,8 +314,9 @@ window.addEventListener('pointermove', event => {
 ![v81.c3b8d567.jpeg](https://cdn.nlark.com/yuque/0/2022/jpeg/1352188/1650873302107-3d2e030c-768f-4f45-adac-ad59c6c4e0f6.jpeg#clientId=u4a83ed14-553c-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u89f8baa8&margin=%5Bobject%20Object%5D&name=v81.c3b8d567.jpeg&originHeight=604&originWidth=1142&originalType=binary&ratio=1&rotation=0&showTitle=false&size=181918&status=done&style=none&taskId=u7f53fdf6-2ee5-4cb4-a045-664e2137fb9&title=)
 ## 参考
 [https://developer.chrome.com/blog/inside-browser-part1/](https://developer.chrome.com/blog/inside-browser-part1/)
+
 [精读现代浏览器](https://github.com/online-books/dt-fe-weekly/blob/master/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF/219.%E7%B2%BE%E8%AF%BB%E3%80%8A%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3%E7%8E%B0%E4%BB%A3%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%80%E3%80%8B.md)
-[本人原文原址](https://www.yuque.com/hebingqian/sd5tn0/kifd3i)
+
 
 
 
