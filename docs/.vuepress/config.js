@@ -32,9 +32,12 @@ const sidebar = {
         }, {
             title: 'this',
             path: 'this'
-        },{
+        }, {
             title: '面向对象相关',
             path: 'extend'
+        }, {
+            title: '浏览器与内核',
+            path: 'browser'
         }, {
             title: '精分现场-预编译',
             path: 'jingfen1'

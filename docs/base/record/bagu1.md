@@ -14,6 +14,10 @@
 - [this基础](https://juejin.cn/post/6869943642325254158#heading-0)
 
 
+**浏览器相关**
+- [浏览器与内核](https://github.com/online-books/dt-fe-weekly/blob/master/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF/219.%E7%B2%BE%E8%AF%BB%E3%80%8A%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3%E7%8E%B0%E4%BB%A3%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%80%E3%80%8B.md)精读现代浏览器
+
+
 **webpack**
 
 - [webpack基础](https://www.jiangruitao.com/webpack/)
