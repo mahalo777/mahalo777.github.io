@@ -1,16 +1,15 @@
 ---
 home: true
 heroImage: /icon.png
-heroText: 填坑之路
+heroText: 专注填坑
 tagline: 种一棵树最好的时间是十年前，其次是现在
 footer: MIT Licensed | Copyright © 2022-present wenny
 ---
 
 ---
-#### JS TODO LIST
-1. new、bind等手写
 
-#### 源码相关
+
+#### TODOLIST
 1. vue2
 2. vue3
 3. react
