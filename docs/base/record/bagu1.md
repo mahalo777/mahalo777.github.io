@@ -32,7 +32,7 @@
 **http**
 
 - [前端缓存请求头](https://zhuanlan.zhihu.com/p/44789005)
-- [http1 1.1 2.0](https://cloud.tencent.com/developer/article/1509279)
+- [队头阻塞](https://cloud.tencent.com/developer/article/1509279)
 
 
 **react native**

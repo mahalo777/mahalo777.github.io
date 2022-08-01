@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>事件循环 | 填坑之路</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="icon.png">
+    <meta name="description" content="填坑日记">
+    
+    <link rel="preload" href="/assets/css/0.styles.35bcedcf.css" as="style"><link rel="preload" href="/assets/js/app.27e483c6.js" as="script"><link rel="preload" href="/assets/js/2.fe518ebb.js" as="script"><link rel="preload" href="/assets/js/3.670af10e.js" as="script"><link rel="prefetch" href="/assets/js/10.aabc5f74.js"><link rel="prefetch" href="/assets/js/11.5dbbeac5.js"><link rel="prefetch" href="/assets/js/12.ffb0a834.js"><link rel="prefetch" href="/assets/js/13.f8364c88.js"><link rel="prefetch" href="/assets/js/14.681edb1e.js"><link rel="prefetch" href="/assets/js/15.c690ccc3.js"><link rel="prefetch" href="/assets/js/16.ce142b68.js"><link rel="prefetch" href="/assets/js/17.feae052e.js"><link rel="prefetch" href="/assets/js/18.9cccb35a.js"><link rel="prefetch" href="/assets/js/19.2b05da0c.js"><link rel="prefetch" href="/assets/js/20.6302a09d.js"><link rel="prefetch" href="/assets/js/4.6a53d464.js"><link rel="prefetch" href="/assets/js/5.283e286b.js"><link rel="prefetch" href="/assets/js/6.36346ba6.js"><link rel="prefetch" href="/assets/js/7.846ec93a.js"><link rel="prefetch" href="/assets/js/8.f7e247e3.js"><link rel="prefetch" href="/assets/js/9.5216cbd1.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.35bcedcf.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">填坑之路</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/base/js/define.html" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/base/summary/http.html" class="nav-link">
+  综合素质
+</a></div><div class="nav-item"><a href="/base/record/test.html" class="nav-link">
+  练习
+</a></div><div class="nav-item"><a href="/diary/summary.html" class="nav-link">
+  札记
+</a></div> <a href="https://github.com/mahalo777/mahalo777.github.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/base/js/define.html" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/base/summary/http.html" class="nav-link">
+  综合素质
+</a></div><div class="nav-item"><a href="/base/record/test.html" class="nav-link">
+  练习
+</a></div><div class="nav-item"><a href="/diary/summary.html" class="nav-link">
+  札记
+</a></div> <a href="https://github.com/mahalo777/mahalo777.github.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span></span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/base/js/define.html" class="sidebar-link">JS语言定义</a></li><li><a href="/base/js/scope.html" class="sidebar-link">作用域与闭包</a></li><li><a href="/base/js/eventLoop.html" aria-current="page" class="active sidebar-link">事件循环</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/base/js/context.html" class="sidebar-link">执行上下文</a></li><li><a href="/base/js/proto.html" class="sidebar-link">原型</a></li><li><a href="/base/js/this.html" class="sidebar-link">this</a></li><li><a href="/base/js/extend.html" class="sidebar-link">面向对象相关</a></li><li><a href="/base/js/jingfen1.html" class="sidebar-link">精分现场-预编译</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="事件循环"><a href="#事件循环" class="header-anchor">#</a> 事件循环</h3> <p><strong>为什么要有事件循环</strong></p> <p>javascript的一个特点就是单线程，但是很多时候我们仍然需要在不同的时间去执行不同的任务，例如给元素添加点击事件，设置一个定时器，或者发起Ajax请求。因此需要一个异步机制</p> <p>大部分语言支持多线程执行，JS拥有最简单的并发模型---JS使用单线程的“事件循环”来处理多个任务的执行，它是非抢断的。</p> <p><strong>为什么JS是单线程</strong></p> <p>JS的单线程，与它的用途有关。作为浏览器脚本语言，JavaScript的主要用途是与用户互动，以及操作DOM。这决定了它只能是单线程，否则会带来很复杂的同步问题。比如，假定JavaScript同时有两个线程，一个线程在某个DOM节点上添加内容，另一个线程删除了这个节点，这时浏览器应该以哪个线程为准？</p> <p>还有人说js还有Worker线程，对的，为了利用多核CPU的计算能力，HTML5提出Web Worker标准，允许JavaScript脚本创建多个线程，但是子线程是完 全受主线程控制的，而且不得操作DOM
+所以，这个标准并没有改变JavaScript是单线程的本质</p> <p><strong>事件循环</strong></p> <p>每一个JavaScript程序都拥有唯一的事件循环，大多数代码的执行顺序是可以根据函数调用栈的规则执行的，而setTimeout/setInterval或者不同的事件绑定中的代码，则通过事件循环机制的队列来执行。</p> <p>setTimeout为任务源，或者任务分发器，由它们将不同的任务分发到不同的任务队列中去。每一个任务都有对应的任务队列。</p> <p>简述：</p> <p>从script(整体代码)开始第一次循环。之后全局上下文进入函数调用栈。直到调用栈清空(只剩全局)，然后执行所有的微任务。微任务执行完后,就完成了第一次循环.
+循环再次从宏任务队列开始，执行一个宏任务执行完毕，然后再执行产生的所有微任务，这样一直循环下去。</p> <p>过程：</p> <ol><li>script 作为第一个宏任务开始第一次循环，解析代码过程中，拆分出同步任务、异步任务。</li> <li>同步任务进入执行栈中依次执行。</li> <li>异步任务会分为宏任务和微任务，进入不同事件表</li> <li>宏任务进入到Event Table中，并在里面注册回调函数，每当事件完成时，Event Table将这个回调函数移到事件队列中；微任务会进入另外一个Event Table中，过程类似，是不同的队列</li> <li>当执行栈清空时，会检查微任务的队列，有则执行；无则入栈执行宏任务队列中的宏任务；一个宏任务执行完毕后，再清空产生的所有微任务。</li> <li>上述过程重复，就是Event Loop</li> <li>宏任务 -&gt; 微任务 -&gt; GUI渲染 -&gt; 宏任务 -&gt; ...</li></ol> <p><strong>宏任务</strong></p> <p>macro-task大概包括：script(整体代码), setTimeout, setInterval, setImmediate, I/O, UI rendering。</p> <p><strong>微任务</strong></p> <p>micro-task大概包括: Promise, process.nextTick, MutationObserver(html5新特性), Object.observe(已废弃)</p> <p><strong>注意点</strong></p> <ul><li>事件循环的顺序，决定了JavaScript代码的执行顺序。</li> <li>多个定时器宏任务，按照定时器延迟时间进行排序</li> <li>来自不同任务源的任务会进入到不同的任务队列。其中setTimeout与setInterval是同源的</li> <li>setTimeout/Promise等我们称之为任务源。而进入任务队列的是他们指定的具体执行任务。</li></ul> <p><strong>进程和线程的区别</strong></p> <p>进程是操作系统分配资源的最小单位，线程是程序执行的最小单位
+一个进程由一个或多个线程组成，线程可以理解为是一个进程中代码的不同执行路线</p> <p>进程之间相互独立，但同一进程下的各个线程间共享程序的内存空间(包括代码段、数据集、堆等)及一些进程级的资源(如打开文件和信号)
+调度和切换：线程上下文切换比进程上下文切换要快得多</p> <p><strong>多进程和多线程</strong></p> <p>多进程：多进程指的是在同一个时间里，同一个计算机系统中如果允许两个或两个以上的进程处于运行状态。多进程带来的好处是明显的，比如大家可以在网易云听歌的同时打开编辑器敲代码，编辑器和网易云的进程之间不会相互干扰</p> <p>多线程：多线程是指程序中包含多个执行流，即在一个程序中可以同时运行多个不同的线程来执行不同的任务，也就是说允许单个程序创建多个并行执行的线程来完成各自的任务</p> <p><strong>浏览器是多进程的</strong></p> <p>一个Tab就是一个进程，使用chrome打开很多标签不关，电脑会很卡，耗cpu</p> <ul><li>Browser进程
+<ul><li>浏览器的主进程（负责协调、主控），该进程只有一个</li> <li>负责浏览器界面显示，与用户交互。前进、后退。</li> <li>页面管理：创建和销毁其他进程</li> <li>将渲染进程得到的内存中的Bitmap(位图)，绘制到用户界面上</li> <li>网络资源的管理，下载等</li></ul></li> <li>第三方插件进程：每种插件对应一个进程，使用插件时创建</li> <li>GPU进程：用于3D绘制</li> <li>++渲染进程（重要）++
+<ul><li>即通常所说的浏览器内核(Renderer进程，内部是多线程)</li> <li>每个Tab页面都有一个渲染进程，互不影响</li> <li>要作用为页面渲染，脚本执行，事件处理等</li></ul></li></ul> <p><strong>为什么浏览器要多进程</strong></p> <p>假设浏览器是单进程，那么某个Tab页崩溃就影响整个浏览器，同理插件崩溃了也会影响整个浏览器。当然多进程还有其它的诸多优势，不过多阐述。</p> <p>浏览器进程有很多，每个进程又有很多线程，都会占用内存
+这也意味着内存等资源消耗会很大，有点拿空间换时间的意思。</p> <p><strong>简述渲染进程Renderer(重)</strong></p> <p>页面的渲染，JS的执行，事件的循环，都在渲染进程内执行，所以我们要重点了解渲染进程。</p> <p>渲染进程是多线程的，我们来看渲染进程的一些常用较为主要的线程：</p> <p><strong>GUI渲染线程</strong></p> <ul><li>负责渲染浏览器界面，解析HTML，CSS，构建DOM树和RenderObject树，布局和绘制等
+<ul><li>解析html代码(HTML代码本质是字符串)转化为浏览器认识的节点，生成DOM树，也就是DOM Tree</li> <li>解析css，生成CSSOM(CSS规则树)</li> <li>把DOM Tree 和CSSOM结合，生成Rendering Tree(渲染树)</li></ul></li> <li>当我们修改了一些元素的颜色或者背景色，页面就会重绘(Repaint)</li> <li>当我们修改元素的尺寸，页面就会回流(Reflow)</li> <li>当页面需要Repaing和Reflow时GUI线程执行，绘制页面</li> <li>回流(Reflow)比重绘(Repaint)的成本要高，我们要尽量避免Reflow和Repaint</li> <li>GUI渲染线程与JS引擎线程是互斥的
+<ul><li>当JS引擎执行时GUI线程会被挂起(相当于被冻结了)</li> <li>GUI更新会被保存在一个队列中等到JS引擎空闲时立即被执行</li></ul></li></ul> <p><strong>JS引擎线程</strong></p> <ul><li>JS引擎线程就是JS内核，负责处理Javascript脚本程序(例如V8引擎)</li> <li>JS引擎线程负责解析Javascript脚本，运行代码</li> <li>JS引擎一直等待着任务队列中任务的到来，然后加以处理
+<ul><li>浏览器同时只能有一个JS引擎线程在运行JS程序，所以js是单线程运行的</li> <li>一个Tab页(renderer进程)中无论什么时候都只有一个JS线程在运行JS程序</li></ul></li> <li>GUI渲染线程与JS引擎线程是互斥的，js引擎线程会阻塞GUI渲染线程
+<ul><li>就是我们常遇到的JS执行时间过长，造成页面的渲染不连贯，导致页面渲染加载阻塞(就是加载慢)</li> <li>例如浏览器渲染的时候遇到script标签，就会停止GUI的渲染，然后js引擎线程开始工作，执行里面的js代码，等js执行完毕，js引擎线程停止工作，GUI继续渲染下面的内容。所以如果js执行时间太长就会造成页面卡顿的情况</li></ul></li></ul> <p><strong>事件触发线程</strong></p> <ul><li>属于浏览器而不是JS引擎，用来控制事件循环，并且管理着一个事件队列(task queue)</li> <li>当js执行碰到事件绑定和一些异步操作(如setTimeOut，也可来自浏览器内核的其他线程，如鼠标点击、AJAX异步请求等)，会走事件触发线程将对应的事件添加到对应的线程中(比如定时器操作，便把定时器事件添加到定时器线程)，等异步事件有了结果，便把他们的回调操作添加到事件队列，等待js引擎线程空闲时来处理。</li> <li>当对应的事件符合触发条件被触发时，该线程会把事件添加到待处理队列的队尾，等待JS引擎的处理</li> <li>因为JS是单线程，所以这些待处理队列中的事件都得排队等待JS引擎处理</li></ul> <p><strong>定时触发器线程</strong></p> <ul><li>setInterval与setTimeout所在线程</li> <li>浏览器定时计数器并不是由JavaScript引擎计数的(因为JavaScript引擎是单线程的，如果处于阻塞线程状态就会影响记计时的准确)</li> <li>通过单独线程来计时并触发定时(计时完毕后，添加到事件触发线程的事件队列中，等待JS引擎空闲后执行)，这个线程就是定时触发器线程，也叫定时器线程</li> <li>W3C在HTML标准中规定，规定要求setTimeout中低于4ms的时间间隔算为4ms</li></ul> <p><strong>异步http请求线程</strong></p> <ul><li>在XMLHttpRequest在连接后是通过浏览器新开一个线程请求</li> <li>将检测到状态变更时，如果设置有回调函数，异步线程就产生状态变更事件，将这个回调再放入事件队列中再由JavaScript引擎执行</li> <li>简单说就是当执行到一个http异步请求时，就把异步请求事件添加到异步请求线程，等收到响应(准确来说应该是http状态变化)，再把回调函数添加到事件队列，等待js引擎线程来执行</li></ul> <p><strong>附图理解</strong></p> <p><img src="/assets/img/eventLoop1.9235e706.png" alt="eventLoop1"> <img src="/assets/img/eventLoop2.2c20b47f.png" alt="eventLoop2"> <img src="/assets/img/eventLoop3.ad0013f8.png" alt="eventLoop3"></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/base/js/scope.html" class="prev">
+        作用域与闭包
+      </a></span> <span class="next"><a href="/base/js/context.html">
+        执行上下文
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.27e483c6.js" defer></script><script src="/assets/js/2.fe518ebb.js" defer></script><script src="/assets/js/3.670af10e.js" defer></script>
+  </body>
+</html>
