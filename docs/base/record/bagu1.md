@@ -4,6 +4,7 @@
 
 - [八股综合1](https://juejin.cn/post/7016593221815910408#heading-85)
 - [移动端适配rem vw](https://juejin.cn/post/6916473795490349063#heading-2)
+- [八股综合2](https://raw.githubusercontent.com/wxlvip/Interviewer/master/01.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.md)
 
 
 **JS**
@@ -31,6 +32,7 @@
 **http**
 
 - [前端缓存请求头](https://zhuanlan.zhihu.com/p/44789005)
+- [http1 1.1 2.0](https://cloud.tencent.com/developer/article/1509279)
 
 
 **react native**

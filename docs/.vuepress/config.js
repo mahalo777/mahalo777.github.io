@@ -3,6 +3,9 @@ const nav =  [{
     text: 'JavaScript',
     link: '/base/js/define'
 }, {
+    text: '综合素质',
+    link: '/base/summary/http'
+}, {
     text: '练习',
     link: '/base/record/test'
 }, {
@@ -36,11 +39,19 @@ const sidebar = {
             title: '面向对象相关',
             path: 'extend'
         }, {
-            title: '浏览器与内核',
-            path: 'browser'
-        }, {
             title: '精分现场-预编译',
             path: 'jingfen1'
+        }]
+    }],
+    '/base/summary/': [{
+        // title: '记录',
+        collapsable: false,
+        children: [{
+            title: 'HTTP',
+            path: 'http'
+        }, {
+            title: '浏览器与内核',
+            path: 'browser'
         }]
     }],
     '/base/record/': [{
