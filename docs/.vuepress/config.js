@@ -17,12 +17,14 @@ const sidebar = {
         children: [{
             title: '解释型语言与编译过程',
             path: 'define'
-        }, {
-            title: '执行上下文',
-            path: 'context'
-        }, {
+        }, 
+        {
             title: '作用域与闭包',
             path: 'scope'
+        },
+        {
+            title: '执行上下文',
+            path: 'context'
         }, {
             title: '事件循环',
             path: 'eventLoop'
