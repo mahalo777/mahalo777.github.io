@@ -8,9 +8,6 @@ const nav =  [{
 }, {
     text: '练习',
     link: '/base/record/test'
-}, {
-    text: '札记',
-    link: '/diary/summary'
 }];
 
 const sidebar = {
@@ -63,14 +60,6 @@ const sidebar = {
         }, {
             title: '八股记录',
             path: 'bagu1'
-        }]
-    }],
-    '/diary/': [{
-        // title: '日记',
-        collapsable: false,
-        children: [{
-            title: '随写',
-            path: 'summary'
         }]
     }],
     '/': [''],
