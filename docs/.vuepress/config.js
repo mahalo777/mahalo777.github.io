@@ -15,18 +15,18 @@ const sidebar = {
         // title: 'js',
         collapsable: false,
         children: [{
-            title: 'JS语言定义',
+            title: '解释型语言与编译过程',
             path: 'define'
+        }, {
+            title: '执行上下文',
+            path: 'context'
         }, {
             title: '作用域与闭包',
             path: 'scope'
         }, {
             title: '事件循环',
             path: 'eventLoop'
-        }, {
-            title: '执行上下文',
-            path: 'context'
-        }, {
+        },  {
             title: '原型',
             path: 'proto'
         }, {
