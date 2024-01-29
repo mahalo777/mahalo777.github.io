@@ -25,7 +25,12 @@ const sidebar = {
         {
             title: '执行上下文',
             path: 'context'
-        }, {
+        }, 
+        {
+            title: '从浏览器->V8->JS的执行过程',
+            path: 'execute'
+        },
+        {
             title: '事件循环',
             path: 'eventLoop'
         },  {
@@ -37,9 +42,6 @@ const sidebar = {
         }, {
             title: '面向对象相关',
             path: 'extend'
-        }, {
-            title: '精分现场-预编译',
-            path: 'jingfen1'
         }]
     }],
     '/base/summary/': [{
