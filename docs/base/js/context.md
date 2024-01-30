@@ -292,7 +292,8 @@ TODO
 
 
 #### 执行过程
-[傻傻分不清之作用域/执行上下文](https://caraws.github.io/2022/03/21/%E5%82%BB%E5%82%BB%E5%88%86%E4%B8%8D%E6%B8%85%E4%B9%8B%E4%BD%9C%E7%94%A8%E5%9F%9F-%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87/)
-[框架很好](https://juejin.cn/post/6956827007296471070#heading-6)
-[两个版本执行过程参考](https://juejin.cn/post/6844904158957404167#heading-12)
-[上下文的函数案例很好](https://juejin.cn/post/6945240902625394718#heading-2)
+- [简版执行上下文创建过程](https://www.cnblogs.com/MomentYY/p/15785719.html)
+- [傻傻分不清之作用域/执行上下文](https://caraws.github.io/2022/03/21/%E5%82%BB%E5%82%BB%E5%88%86%E4%B8%8D%E6%B8%85%E4%B9%8B%E4%BD%9C%E7%94%A8%E5%9F%9F-%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87/)
+- [框架很好](https://juejin.cn/post/6956827007296471070#heading-6)
+- [两个版本执行过程参考](https://juejin.cn/post/6844904158957404167#heading-12)
+- [上下文的函数案例很好](https://juejin.cn/post/6945240902625394718#heading-2)
