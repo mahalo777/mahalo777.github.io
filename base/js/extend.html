@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>面向对象 | 填坑之路</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="icon.png">
+    <meta name="description" content="填坑日记">
+    
+    <link rel="preload" href="/assets/css/0.styles.e4d8b86b.css" as="style"><link rel="preload" href="/assets/js/app.2ecebb8b.js" as="script"><link rel="preload" href="/assets/js/2.819caa33.js" as="script"><link rel="preload" href="/assets/js/11.14589761.js" as="script"><link rel="prefetch" href="/assets/js/10.70c2d5c8.js"><link rel="prefetch" href="/assets/js/12.db448d72.js"><link rel="prefetch" href="/assets/js/13.c9a52e04.js"><link rel="prefetch" href="/assets/js/14.33903181.js"><link rel="prefetch" href="/assets/js/15.956c2b6f.js"><link rel="prefetch" href="/assets/js/16.36aea976.js"><link rel="prefetch" href="/assets/js/17.34d02037.js"><link rel="prefetch" href="/assets/js/18.68b6e486.js"><link rel="prefetch" href="/assets/js/19.dc0e3d98.js"><link rel="prefetch" href="/assets/js/20.736d2805.js"><link rel="prefetch" href="/assets/js/21.fefb785b.js"><link rel="prefetch" href="/assets/js/22.72240040.js"><link rel="prefetch" href="/assets/js/23.b053b977.js"><link rel="prefetch" href="/assets/js/3.4676ee49.js"><link rel="prefetch" href="/assets/js/4.c93f0a41.js"><link rel="prefetch" href="/assets/js/5.8f9d576f.js"><link rel="prefetch" href="/assets/js/6.53827f4d.js"><link rel="prefetch" href="/assets/js/7.92103c4b.js"><link rel="prefetch" href="/assets/js/8.97402c9c.js"><link rel="prefetch" href="/assets/js/9.474fbd81.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e4d8b86b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">填坑之路</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/base/js/define.html" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/base/browser/browser.html" class="nav-link">
+  浏览器机制
+</a></div><div class="nav-item"><a href="/base/summary/http.html" class="nav-link">
+  综合素质
+</a></div> <a href="https://github.com/mahalo777/mahalo777.github.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/base/js/define.html" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/base/browser/browser.html" class="nav-link">
+  浏览器机制
+</a></div><div class="nav-item"><a href="/base/summary/http.html" class="nav-link">
+  综合素质
+</a></div> <a href="https://github.com/mahalo777/mahalo777.github.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span></span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/base/js/define.html" class="sidebar-link">解释型语言与编译过程</a></li><li><a href="/base/js/v8.html" class="sidebar-link">V8是如何执行JS的</a></li><li><a href="/base/js/execute.html" class="sidebar-link">从浏览器-&gt;V8-&gt;JS的执行过程</a></li><li><a href="/base/js/context.html" class="sidebar-link">执行上下文</a></li><li><a href="/base/js/contextExpand.html" class="sidebar-link">执行上下文与作用域</a></li><li><a href="/base/js/scope.html" class="sidebar-link">作用域与闭包</a></li><li><a href="/base/js/eventLoop.html" class="sidebar-link">事件循环</a></li><li><a href="/base/js/proto.html" class="sidebar-link">原型</a></li><li><a href="/base/js/this.html" class="sidebar-link">this</a></li><li><a href="/base/js/extend.html" aria-current="page" class="active sidebar-link">面向对象相关</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="面向对象"><a href="#面向对象" class="header-anchor">#</a> 面向对象</h3> <h4 id="概念"><a href="#概念" class="header-anchor">#</a> 概念</h4> <p>面向对象的语言有一个标志，那就是都有类的概念，通过类可以创建任意多个具有相同属性和方法的对象。</p> <h4 id="对象属性类型"><a href="#对象属性类型" class="header-anchor">#</a> 对象属性类型</h4> <p>ECMA中有两种属性：数据属性和访问器属性。</p> <p>数据属性有4个描述其行为的特性：[[Configurable]]（删除和改成访问器属性）、[[Enumerable]]、[[Writable]]、[[Value]]。使用字面量创建的默认是true。</p> <p>访问器属性：[[Configurable]]、[[Enumerable]]、[[Get]]、[[Set]]。访问器属性不能直接定义，必须使用<code>object.defineProperty</code>定义</p> <p>定义这些特性是为了实现JavaScript引擎用的，因此在JavaScript中不能直接访问，需要使用<code>object.defineProperty</code>操作 。</p> <p>注意：一旦使用[[Configurable]]变成不可配置的，就不能变成可配置了的。</p> <h4 id="创建对象的方式"><a href="#创建对象的方式" class="header-anchor">#</a> 创建对象的方式</h4> <ul><li><p>创建一个对象({}、new Object())，然后用object.defineProperty或者.操作符定义属性</p></li> <li><p>对象字面量语法</p> <div class="language- extra-class"><pre class="language-text"><code>const person = {
+    name: 'yoyo',
+    sayName: function() {
+        console.log(this.name)
+    }
+}
+</code></pre></div></li> <li><p>工厂模式：使用Object构造函数或对象字面量都可以创建单个对象，但会产生大量重复代码。</p></li> <li><p>构造函数模式</p></li> <li><p>原型模式</p></li> <li><p>组合使用构造函数和原型模式</p></li> <li><p>...</p></li></ul> <h5 id="_1、工厂模式"><a href="#_1、工厂模式" class="header-anchor">#</a> 1、工厂模式</h5> <p>优点：解决了创建多个相似对象的问题
+缺点：没有解决对象识别的问题，instanceof 不可用</p> <div class="language- extra-class"><pre class="language-text"><code>function createPerson(name, age) {
+    const o = new Object();
+    o.name = name;
+    o.age = age;
+
+    o.sayName = function() {
+        console.log(this.name);
+    }
+    return o;
+}
+
+const person = createPerson('zhuzhu', 3);
+</code></pre></div><h5 id="_2、-构造函数模式"><a href="#_2、-构造函数模式" class="header-anchor">#</a> 2、 构造函数模式</h5> <p>优点：解决了工厂模式对象识别问题，能使用instanceof(后几种都能使用)；没有显示创建对象
+缺点：每个方法都要在每个实例上重新创建一遍；方法放全局能解决这一问题，但会污染全局环境</p> <div class="language- extra-class"><pre class="language-text"><code>function Person(name, age) {
+    this.name = name;
+    this.age = age;
+    this.sayName = function() {
+        console.log(this.name);
+    }
+}
+
+const person2 = new Person('zhuzhujing', 4);
+</code></pre></div><p>补充：new 操作符的过程：</p> <ol><li>创建一个新对象</li> <li>新对象原型指向构造函数原型对象</li> <li>将构造函数的this指向新对象，并执行构造函数(构造函数apply)</li> <li>返回新对象</li></ol> <h5 id="_3、-原型模式"><a href="#_3、-原型模式" class="header-anchor">#</a> 3、 原型模式</h5> <p>优点：所有实例共享原型的属性和方法，不必在构造函数中定义对象实例的信息
+缺点：所有实例在默认情况下取得相同的属性，需要实例覆盖；最大的问题是共享引用类型值的属性，尤其是数组。</p> <p>补充：</p> <ol><li>prototype是通过调用构造函数而创建的对象实例的原型对象
+只要创建一个函数，就会为函数创建一个prototype属性，这个属性指向函数的原型对象。原型对象会获得一个constructor属性，包含指向构造函数的指针。</li> <li>hasOwnProperty方法可检查属性是否在实例</li> <li>in 无法区分在实例和原型</li> <li>注意原型对象能被覆盖</li></ol> <div class="language- extra-class"><pre class="language-text"><code>function Person() {
+
+}
+
+Person.prototype.name = 'zhuzhu';
+Person.prototype.age = 23;
+Person.prototype.sayName = function() {
+    console.log(this.name);
+}
+
+const person1 = new Person();
+person1.sayName();
+</code></pre></div><h5 id="_4、-组合使用构造函数和原型模式"><a href="#_4、-组合使用构造函数和原型模式" class="header-anchor">#</a> 4、 组合使用构造函数和原型模式</h5> <p>优点：构造函数模式用于定义实例属性，而原型模式用于定义方法和共享的属性。每个实例有自己的一份实例属性的副本，又共享着对方法的引用。
+缺点：暂无，所有信息没有都在构造函数中(可能不符合某些oo编程的习惯)</p> <div class="language- extra-class"><pre class="language-text"><code>function Person(name, age) {
+    this.name = name;
+    this.age = age;
+    this.friends = ['hong', 'ming'];
+}
+
+Person.prototype = {
+    constructor: Person,
+    sayName: function () {
+        console.log(this.name)
+    }
+}
+
+const person1 = new Person('zhuzhu', 2);
+</code></pre></div><h5 id="_5、-动态原型模式"><a href="#_5、-动态原型模式" class="header-anchor">#</a> 5、 动态原型模式</h5> <p>优点：把所有信息封装在构造函数中，仅在必要的情况下初始化原型，堪称完美
+缺点：无</p> <div class="language- extra-class"><pre class="language-text"><code>function Person(name, age) {
+    this.name = name;
+    this.age = age;
+    if (typeof this.sayName != 'function') {
+        Person.prototype.sayName = function () {
+            console.log(this.name)
+        }
+    }
+}
+
+const person1 = new Person('zhuzhu', 2);
+person1.sayName();
+</code></pre></div><h5 id="_6、-寄生构造函数模式"><a href="#_6、-寄生构造函数模式" class="header-anchor">#</a> 6、 寄生构造函数模式</h5> <p>除了使用new 操作符，并把包装函数叫做构造函数外，这个模式跟工厂模式其实一模一样。
+优点：在特殊情况下可以为对象创建构造函数，比如想要一个额外方法的数组，又不想直接修改Array构造函数
+缺点：返回的对象跟构造函数或构造函数的原型之间没有关系，也就是说，构造函数返回的对象与在构造函数外部创建的函数没有什么不同。为此不能依赖instanceof 来确定对象类型。能使别的就用别的。</p> <div class="language- extra-class"><pre class="language-text"><code>function Person(name, age) {
+    const o = new Object();
+    o.name = name;
+    o.age = age;
+
+    o.sayName = function() {
+        console.log(this.name);
+    }
+    return o;
+}
+</code></pre></div><p>用途：</p> <div class="language- extra-class"><pre class="language-text"><code>function SpecialArray() {
+    const values = new Array();
+    values.push.apply(values, arguments);
+
+    values.toPipedString = function () {
+        return this.join('|');
+    }
+
+    return values;
+}
+
+const colors = new SpecialArray('red', 'blue');
+console.log(colors.toPipedString());
+</code></pre></div><h5 id="_7、-稳妥构造函数模式"><a href="#_7、-稳妥构造函数模式" class="header-anchor">#</a> 7、 稳妥构造函数模式</h5> <p>优点：某些特殊情况使用，不使用this、new
+缺点：与寄生构造函数类似，但不能使用instanceof</p> <p>稳妥对象(durable objects)指没有公共属性，其方法也不引用this的对象，适合在安全环境中使用（禁用this、new），或者方式数据被其他应用程序改动时使用。</p> <p>稳妥构造函数模式与寄生构造函数类似，但两点不同：1、新创建对象的实例方法不引用this，2、不使用new 调用构造函数</p> <div class="language- extra-class"><pre class="language-text"><code>function Person(name, age) {
+    const o = new Object();
+    o.name = name;
+    o.age = age;
+
+    o.sayName = function() {
+        console.log(name);
+    }
+    return o;
+}
+
+const person = Person('zhuzhu', 3);
+person.sayName();
+
+</code></pre></div><p>这样变量person中保存的就是一个稳妥对象，除了调用sayName方法外，没有别的方式访问其数据成员。即使有别的代码会给这个对象添加方法和属性，但是也不可能有别的办法访问：传入到构造函数中的原始数据。</p> <h4 id="继承"><a href="#继承" class="header-anchor">#</a> 继承</h4> <p>继承是oo中的重要概念，一般都支持：接口继承和实现继承。接口继承只继承方法签名，实现继承则继承实际的方法。由于函数没有签名，则ECMAS无法实现接口继承，只支持实现继承。并且实现继承主要依靠原型链来实现。</p> <h5 id="原型链"><a href="#原型链" class="header-anchor">#</a> 原型链</h5> <p>基本思想是利用原型让一个引用类型继承另一个引用类型的方法，重写原型对象。</p> <p>构造函数、原型、实例的关系：每个构造函都有一个原型对象，原型对象都包含一个指向构造函数的指针，而实例都包含一个指向原型对象的指针</p> <p>实现：让原型对象等于另一个类型的实例。此时的原型对象将包含一个指向另一个原型的指针，相应地，另一个原型中包含着一个指向另一个构造函数的指针。假如另一个原型又是另一个类型的实例，那么上述关系依旧成立。如此层层递进，构成了实例和原型的链条。这就是所谓的原型链的基本概念。</p> <p>原型链搜索：当读取某个实例属性时，首先会在实例中搜索该属性，如果没有找到该属性，则会继续搜索实例的原型。</p> <p>默认的原型：所有引用类型默认都继承了Object，而这个继承也是通过原型链实现的。所以所有函数的默认原型都是Object的实例，因此默认原型都会包含一个内部指针，指向Object.prototype，这也是所有自定义类型都会继承toString()、valueOf()等默认方法的根本原因。</p> <p>确认原型和实例的关系：
+instanceof - 实例和原型链中出现的构造函数 <code>person instanceof Object</code>
+isPrototypeof - 只要是原型链中出现过的原型 <code>Object.prototype.isPrototypeOf(person)</code></p> <p>谨慎的定义方法：</p> <ul><li>重写超类中的某个方法，或者添加超类中不存在的方法。注意添加方法要放在替换原型的语句之后。重写后会发生屏蔽，但是超类的实例还是会调用旧方法。</li> <li>使用原型链继承时，不能使用对象字面量创建原型方法。因为这样会重写原型链，切断和之前的联系。</li></ul> <h5 id="_1、原型链继承"><a href="#_1、原型链继承" class="header-anchor">#</a> 1、原型链继承</h5> <p>原型链的问题：</p> <ul><li>引用类型的问题：组合继承中，我们在构造函数中定义属性。在通过原型来继承时，原型变成了超类的实例，超类实例中的引用类型属性就变成了原型属性，会被所有子实例共享。</li> <li>创建子类型的实例时，不能向超类型的构造函数中传递参数。</li></ul> <div class="language- extra-class"><pre class="language-text"><code>function SuperType() {
+    this.name = 'super';
+}
+
+SuperType.prototype.getName = function() {
+    return this.name;
+}
+
+function SubType() {
+    this.subName = 'sub';
+}
+
+SubType.prototype = new SubType();
+SubType.prototype.getSubName = function () {
+    return this.subName;
+}
+
+const instance = new SubType();
+console.log(instance.getSubName())
+</code></pre></div><h5 id="_2、借用构造函数"><a href="#_2、借用构造函数" class="header-anchor">#</a> 2、借用构造函数</h5> <p>目的：为了解决原型中引用类型值所带来的问题，在子类构造函数内部调用超类构造函数。
+优势：在子类行构造函数中向超类构造函数传递参数，解决原型中引用类型带来的问题。
+问题：方法都在构造函数中定义，函数复用无从谈起。在超类型原型中定义的方法，对子类也是不可见的，结果就是所有类型都只能使用构造函数模式。因为这种方式很少单独使用。</p> <div class="language- extra-class"><pre class="language-text"><code>function SuperType(name) {
+    this.name = name;
+    this.color = ['red', 'blue'];
+}
+
+function SubType() {
+    SuperType.call(this, 'zhuzhu');
+    this.age = 20;
+}
+
+const instance = new SubType();
+const instance1 = new SubType();
+instance.color.push('green');
+console.log(instance.color, instance1.color)
+</code></pre></div><h5 id="_3、组合继承"><a href="#_3、组合继承" class="header-anchor">#</a> 3、组合继承</h5> <p>最常用的方式，结合原型链和借用构造函数，避免了二者的缺陷，融合了它们的优点。
+缺点：超类构造函数会调用两次</p> <div class="language- extra-class"><pre class="language-text"><code>function SuperType(name) {
+    this.name = name;
+    this.color = ['red', 'blue'];
+}
+
+SuperType.prototype.sayName = function() {
+    console.log(this.name);
+}
+
+function SubType() {
+    SuperType.call(this, 'zhuzhu');
+    this.age = 20;
+}
+
+SubType.prototype = new SuperType();
+SubType.prototype.sayAge = function() {
+    console.log(this.age)
+}
+
+const instance = new SubType();
+const instance1 = new SubType();
+instance.color.push('green');
+instance.sayName();
+instance.sayAge();
+console.log(instance.color, instance1.color)
+</code></pre></div><h5 id="原型式继承"><a href="#原型式继承" class="header-anchor">#</a> 原型式继承</h5> <p>概念：借用原型可以基于已有的对象创建新对象，同时还不必因此创建自定义类型。
+应用：在没有必要兴师动众地创建构造函数，只想让一个对象和另一个对象类似的情况下。
+重点：引用类型值的属性都是中会共享相应的值，同原型模式。</p> <div class="language- extra-class"><pre class="language-text"><code>function object(o) {
+    function F() {}
+    F.prototype = o;
+    return new F();
+}
+</code></pre></div><p>先创建了一个临时性的构造函数，然后将传入的对象作为这个构造函数的原型，最后返回了这个临时类型的一个新实例。本质上讲，object()对传入的对象实现了浅复制。</p> <div class="language- extra-class"><pre class="language-text"><code>const person = {
+    name: 'pig',
+    friends: ['zhu', 'mie']
+}
+
+const person1 = object(person);
+const person2 = object(person);
+
+person1.name = 'pig1';
+person2.name = 'pig2';
+person1.friends.push('ha');
+
+console.log(person.friends, person2.friends, person1.name, person.name);
+</code></pre></div><p>object可以用Object.create()替换。</p> <h5 id="寄生式继承"><a href="#寄生式继承" class="header-anchor">#</a> 寄生式继承</h5> <p>概念：与原型式结合紧密。思路与寄生构造函数和工厂模式类似，即创建一个仅用于封装过程的函数，该函数在内部以某种方式增强对象，可以在内部增加自己的属性和方法。</p> <p>重点：引用类型值的属性都是中会共享相应的值，同原型模式。</p> <p>这个方式重点是，在构造函数中，增强实例，增加属于他的方法和属性。
+object()可替换为任何能够返回新对象的函数。</p> <div class="language- extra-class"><pre class="language-text"><code>function createAnother(o) {
+    const clone = object(o);
+    clone.sayHi = function () {
+        console.log('hi')
+    }
+    return clone;
+}
+
+const another = createAnother(person);
+another.sayHi();
+another.friends.push('c');
+
+console.log(another.friends, person.friends)
+</code></pre></div><h5 id="寄生组合式继承"><a href="#寄生组合式继承" class="header-anchor">#</a> 寄生组合式继承</h5> <p>目的：为了解决组合继承的两次调用超类构造函数
+最理想的</p> <div class="language- extra-class"><pre class="language-text"><code>function SuperType(name) {
+    this.name = name;
+    this.color = ['red', 'blue'];
+}
+
+SuperType.prototype.sayName = function() {
+    console.log(this.name);
+}
+
+function SubType() {
+    SuperType.call(this, 'zhuzhu'); // 第二次调用超类
+    this.age = 20;
+}
+
+SubType.prototype = new SuperType(); // 第一次调用超类
+SubType.prototype.sayAge = function() {
+    console.log(this.age)
+}
+
+const instance = new SubType();
+const instance1 = new SubType();
+instance.color.push('green');
+instance.sayName();
+instance.sayAge();
+console.log(instance.color, instance1.color)
+</code></pre></div><p>第一次调用超类构造函数时，子类型的原型会的到两个属性name和color，他们是超类的实例，只不过出现在子类的原型中。</p> <p>当调用子类的构造函数时，又调用一次超类构造函数，这一次在新对象上创建了实例属性。于是实例上的属性就屏蔽了原型中的同名属性。因此其实存在两组属性，一组在原型，一组在实例。</p> <p>解决：去掉第一次调用超类，不必为了指定子类型的原型而调用超类的构造函数，我们只是想要超类原型的一个副本而已。本质上，就是使用寄生式继承来继承超类型的原型，然后将结果指定给子类的原型。</p> <div class="language- extra-class"><pre class="language-text"><code>function inheritPrototype(SubType, SuperType) {
+    const prototype = object(SuperType.prototype); // 创建对象，获取副本
+    prototype.constructor = SubType;// 增强对象，为副本增加constructor属性，弥补因重写原型而失去的默认的constructor属性
+    SubType.prototype = prototype;// 指定对象
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>function SuperType(name) {
+    this.name = name;
+    this.color = ['red', 'blue'];
+}
+
+SuperType.prototype.sayName = function() {
+    console.log(this.name);
+}
+
+function SubType() {
+    SuperType.call(this, 'zhuzhu'); // 第二次调用超类
+    this.age = 20;
+}
+
+inheritPrototype(SubType, SuperType);
+SubType.prototype.sayAge = function() {
+    console.log(this.age)
+}
+
+const instance = new SubType();
+const instance1 = new SubType();
+instance.color.push('green');
+instance.sayName();
+instance.sayAge();
+console.log(instance.color, instance1.color)
+</code></pre></div><h5 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h5> <p><img src="/assets/img/extend.c267ddf9.png" alt="summaryoo"></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/base/js/this.html" class="prev">
+        this
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2ecebb8b.js" defer></script><script src="/assets/js/2.819caa33.js" defer></script><script src="/assets/js/11.14589761.js" defer></script>
+  </body>
+</html>
