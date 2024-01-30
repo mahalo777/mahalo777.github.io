@@ -7,18 +7,6 @@
 - [八股综合2](https://raw.githubusercontent.com/wxlvip/Interviewer/master/01.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.md)
 
 
-**JS**
-
-- [执行上下文](https://juejin.cn/post/6945240902625394718#heading-12)好文
-- [事件循环](https://juejin.cn/post/6844904050543034376)
-- [原型基础](https://juejin.cn/post/6890710212803002376#heading-4)
-- [this基础](https://juejin.cn/post/6869943642325254158#heading-0)
-
-
-**浏览器相关**
-- [浏览器与内核](https://github.com/online-books/dt-fe-weekly/blob/master/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF/219.%E7%B2%BE%E8%AF%BB%E3%80%8A%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3%E7%8E%B0%E4%BB%A3%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%80%E3%80%8B.md)精读现代浏览器
-
-
 **webpack**
 
 - [webpack基础](https://www.jiangruitao.com/webpack/)

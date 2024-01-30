@@ -264,7 +264,7 @@ window.addEventListener('pointermove', event => {
 - 将检测到状态变更时，如果设置有回调函数，异步线程就产生状态变更事件，将这个回调再放入事件队列中，再由JavaScript引擎执行
 
 ![2473796310-5aba11e73b2df_fix732.webp](https://cdn.nlark.com/yuque/0/2022/webp/1352188/1650966211184-bae1807e-d4c1-4f0a-8ffa-1fbf666f4038.webp#clientId=u758a1429-9ef2-4&crop=0&crop=0&crop=1&crop=1&from=ui&height=304&id=ub2d5c61b&margin=%5Bobject%20Object%5D&name=2473796310-5aba11e73b2df_fix732.webp&originHeight=608&originWidth=655&originalType=binary&ratio=1&rotation=0&showTitle=false&size=37918&status=done&style=none&taskId=uf34ffa1a-7d04-4b5a-b127-44f53ffbc84&title=&width=328)
-### 再回一下：渲染进程和Browser主进程的通信过程
+### 回顾一下：渲染进程和Browser主进程的通信过程
 
 - Browser主进程收到用户请求，首先需要获取页面内容（如通过网络下载资源）,随后将该任务通过RendererHost接口传递给Render渲染进程
 - Render渲染进程的Renderer接口收到消息，简单解释后，交给渲染线程GUI，然后开始渲染
