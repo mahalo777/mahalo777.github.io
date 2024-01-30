@@ -1,26 +1,72 @@
 
-## v8引擎是如何一步一步运行地
-[v8引擎是如何一步一步运行地](https://zhuanlan.zhihu.com/p/461223824)
+## Ignition + TurboFan如何使内存变小，越来越快的？
+
+### 机器码和字节码
+- 机器码需要更大的内存，可能是源文件千倍的增长
+- 机器码并不是一定都比字节码快：
+  - 虽然机器码在执行阶段非常快，但是它需要花费很长时间用来编译。
+  - 字节码的编译时间更短，但是代价是执行阶段也更慢。一个解释器在执行字节码之前需要先解释它。
+- 机器码增加了开发中的复杂度。如果浏览器只使用机器码，那么它需要分别处理不同类型的 CPU，所以一切始于抽象。
+
+当我们从头到尾衡量这两个方案时，哪个会更快？这要视情况而定。
+在两种方案之间找到一个平衡：同时为字节码开发出一个更强大的解释器和一个更智能的优化编译器。
+Ignition，V8 使用的解释器，是市面上最快的。
+TurboFan，V8 使用的优化编译器，可以把字节码编译成高度优化的机器码。
+
+![v8compile](~@imgs/v8compile.png)
+[编译和执行机器代码-5](https://zhuanlan.zhihu.com/p/461223824) 值得学习
+
+
+
+### v8早期设计
+早期的V8有Full-Codegen和Crankshaft两个编译器。V8 首先用 Full-Codegen把所有的代码都编译一次，生成对应的机器码。JS在执行的过程中，V8内置的Profiler筛选出热点函数并且记录参数的反馈类型，然后交给 Crankshaft 来进行优化。所以Full-Codegen本质上是生成的是未优化的机器码，而Crankshaft生成的是优化过的机器码。
+
+
+**V8早期架构的缺陷**
+
+随着版本的引进，网页的复杂化，V8也渐渐的暴露出了自己架构上的缺陷：
+
+- Full-Codegen编译直接生成机器码，导致内存占用大
+- Full-Codegen编译直接生成机器码，导致编译时间长，导致启动速度慢
+- Crankshaft 无法优化try，catch和finally等关键字划分的代码块
+- Crankshaft新加语法支持，需要为此编写适配不同的Cpu架构代码
+
+
+### v8现在的设计
+使用新架构后，内存降低了一半多，网页速度提升70%。
+
+Ignition是V8的解释器，背后的原始动机是减少移动设备上的内存消耗。在Ignition之前，V8的Full-codegen基线编译器生成的代码通常占据Chrome整体JavaScript堆的近三分之一。这为Web应用程序的实际数据留下了更少的空间。
+
+**Ignition的字节码可以直接用TurboFan生成优化的机器代码，而不必像Crankshaft那样从源代码重新编译。Ignition的字节码在V8中提供了更清晰且更不容易出错的基线执行模型，简化了去优化机制，这是V8 自适应优化的关键特性。最后，由于生成字节码比生成Full-codegen的基线编译代码更快，因此激活Ignition通常会改善脚本启动时间，从而改善网页加载。**
+
+
+### 举例看优化
+下文中，add函数传入不同的参数，经过优化生成不同的机器码。
+如果传入的是整型，则本质上是直接调用add汇编指令。
+如果传入的是字符串，则本质上是调用V8的内置Add函数。
+我们可以理解：
+1. 根据不同参数类型，调用不同的命令，选择最快的
+2. 解释器直接使用优化后的机器码，这也提速了
+
+[v8执行流程图解](https://zhuanlan.zhihu.com/p/111386872)值得学习
+
+
 
 ## 结合V8代码中的类理解编译过程
+![context](~@imgs/v8source.png)
+- [结合V8代码中的类理解编译过程](https://juejin.cn/post/6844904137792962567)了解
+- [V8源码](https://www.zhihu.com/column/v8core)了解
 
-[结合V8代码中的类理解编译过程](https://juejin.cn/post/6844904137792962567)
-[JavaScript 引擎 V8 执行流程概述图版](https://zhuanlan.zhihu.com/p/111386872)
-[V8源码](https://www.zhihu.com/column/v8core)
-
-## Turbofan优化了什么
-[Turbofan优化了什么](https://zhuanlan.zhihu.com/p/111386872)
 
 ## 浏览器是如何工作的
-[浏览器是如何工作的：Chrome V8让你更懂JavaScript](https://juejin.cn/post/6882529843892731911)
+[浏览器是如何工作的：Chrome V8让你更懂JavaScript](https://juejin.cn/post/6882529843892731911)比较全
+
 
 ## V8的内存管理和垃圾回收机制
-[v8内存管理](https://zhuanlan.zhihu.com/p/470643126)
-[垃圾回收机制](https://zhuanlan.zhihu.com/p/55917130)
+- [v8内存管理](https://zhuanlan.zhihu.com/p/470643126)了解
+- [垃圾回收机制](https://zhuanlan.zhihu.com/p/55917130)了解
+
 
 ## 面试题
 [简单的面试题](https://blog.csdn.net/qq_52732369/article/details/122342950)
 
-
-## TODO
-Turbofan优化了什么
